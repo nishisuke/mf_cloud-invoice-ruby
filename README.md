@@ -1,4 +1,4 @@
-# mf_cloud-invoice-ruby
+# mf_cloud-invoice-ruby [![Code Climate](https://codeclimate.com/github/moneyforward/mf_cloud-invoice-ruby/badges/gpa.svg)](https://codeclimate.com/github/moneyforward/mf_cloud-invoice-ruby)
 
 [MFクラウド請求書API](https://github.com/moneyforward/invoice-api-doc) client library for Ruby
 
