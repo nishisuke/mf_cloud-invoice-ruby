@@ -1,4 +1,4 @@
-# mf_cloud-invoice-ruby [![Code Climate](https://codeclimate.com/github/moneyforward/mf_cloud-invoice-ruby/badges/gpa.svg)](https://codeclimate.com/github/moneyforward/mf_cloud-invoice-ruby)
+# mf_cloud-invoice-ruby [![Build Status](https://travis-ci.org/moneyforward/mf_cloud-invoice-ruby.svg?branch=master)](https://travis-ci.org/moneyforward/mf_cloud-invoice-ruby) [![Code Climate](https://codeclimate.com/github/moneyforward/mf_cloud-invoice-ruby/badges/gpa.svg)](https://codeclimate.com/github/moneyforward/mf_cloud-invoice-ruby)
 
 [MFクラウド請求書API](https://github.com/moneyforward/invoice-api-doc) client library for Ruby
 
@@ -166,28 +166,28 @@ client.items.delete(id)
 About available parameters, see [API doc](https://github.com/moneyforward/invoice-api-doc#品目api)
 
 ### Errors
-* MfCloud::Invoice::InvalidAccessToken  
+* MfCloud::Invoice::InvalidAccessToken
 Access token is nil or invalid or expired.
 
-* MfCloud::Invoice::PaymentRequired  
+* MfCloud::Invoice::PaymentRequired
 The number of object is over than payment plan limit.
 For example, when using Starter plan, number of partner limit is 3.
 See [plan detail](https://invoice.moneyforward.com/pricing).
 
-* MfCloud::Invoice::InvalidRequest  
+* MfCloud::Invoice::InvalidRequest
 Parameter is collect but validation is not passed.
 
-* MfCloud::Invoice::ResourceNotFound  
+* MfCloud::Invoice::ResourceNotFound
 Request id is invalid. This raises not only request resouce id, also id in parameters(For example, department_id when updating a billing).
 
-* MfCloud::Invoice::InvalidParameter  
+* MfCloud::Invoice::InvalidParameter
 Parameter format is invalid or necessaly parameter is missing.
 
-* MfCloud::Invoice::RateLimitted  
+* MfCloud::Invoice::RateLimitted
 Up to rate limit.
 See [here](https://github.com/moneyforward/invoice-api-doc#プランごとの利用制限について)
 
-* MfCloud::Invoice::InternalServerError  
+* MfCloud::Invoice::InternalServerError
 Unexpected error has happen. Almost case it's success sometime later. Almost case, it will be success some time later. Please try few minits later.
 
 ## Development
