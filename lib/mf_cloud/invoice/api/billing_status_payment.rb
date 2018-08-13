@@ -3,19 +3,22 @@ module MfCloud
     module Api
       class BillingStatusPayment < MfCloud::Invoice::Api::Base
         BASE_NAME = 'billing_status'
+        DEFAULT_VALUE = '0'
+        NOT_TRANSFERRED_VALUE = '1'
+        TRANSFERRED_VALUE = '2'
 
         allow_method :update
 
         def default!(billing_id)
-          update(billing_id, { payment: '0' })
+          update(billing_id, { payment: DEFAULT_VALUE })
         end
 
         def not_transferred!(billing_id)
-          update(billing_id, { payment: '1' })
+          update(billing_id, { payment: NOT_TRANSFERRED_VALUE })
         end
 
         def transferred!(billing_id)
-          update(billing_id, { payment: '2' })
+          update(billing_id, { payment: TRANSFERRED_VALUE })
         end
 
         private
