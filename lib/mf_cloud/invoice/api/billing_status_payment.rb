@@ -7,15 +7,15 @@ module MfCloud
         allow_method :update
 
         def default!(billing_id)
-          update(billing_id, { payment: 0 })
+          update(billing_id, { payment: '0' })
         end
 
         def not_transferred!(billing_id)
-          update(billing_id, { payment: 1 })
+          update(billing_id, { payment: '1' })
         end
 
         def transferred!(billing_id)
-          update(billing_id, { payment: 2 })
+          update(billing_id, { payment: '2' })
         end
 
         private
