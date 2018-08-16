@@ -6,6 +6,7 @@ require 'mf_cloud/invoice/api/office'
 require 'mf_cloud/invoice/api/partner'
 require 'mf_cloud/invoice/api/item'
 require 'mf_cloud/invoice/api/billing'
+require 'mf_cloud/invoice/api/billing_status_payment'
 
 require 'mf_cloud/invoice/model/base'
 require 'mf_cloud/invoice/model/office'
@@ -53,6 +54,10 @@ module MfCloud
 
       def billings
         @_billings ||= MfCloud::Invoice::Api::Billing.new(self)
+      end
+
+      def billing_status_payment
+        @_billing_status_payment ||= MfCloud::Invoice::Api::BillingStatusPayment.new(self)
       end
 
       def get(path, params = {})
